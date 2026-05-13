@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import api from "../services/api";
 import { useEffect, useState } from "react";
 
@@ -45,6 +45,9 @@ function ProdutoDetalhe() {
       <p>{produto.description}</p>
       <p>Preço: R$ {produto.price}</p>
       <p>Estoque: {produto.stock}</p>
+      <Link to="/produtos">
+        <button>Voltar</button>
+      </Link>
     </main>
   );
 }
