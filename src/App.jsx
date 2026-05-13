@@ -1,6 +1,7 @@
 import api from "./services/api";
 import { useEffect, useState } from "react";
 import CardProduto from "./components/CardProduto";
+import "./App.css";
 
 function App() {
   const [produtos, setProdutos] = useState([]);
@@ -31,12 +32,14 @@ function App() {
   }
 
   return (
-    <div>
+    <main>
       <h1>Produtos</h1>
-      {produtos.map((produto) => (
-        <CardProduto key={produto.id} produto={produto} />
-      ))}
-    </div>
+      <div className="produtos-grid">
+        {produtos.map((produto) => (
+          <CardProduto key={produto.id} produto={produto} />
+        ))}
+      </div>
+    </main>
   );
 }
 

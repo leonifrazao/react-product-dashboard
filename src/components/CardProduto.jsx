@@ -8,9 +8,7 @@ function CardProduto({ produto }) {
       <h2>{produto.title}</h2>
       <p>Valor: {produto.price}</p>
       <p>Avaliacao: {produto.rating}</p>
-      <p>
-        In Stock: {produto.availabilityStatus === "In Stock" ? "True" : "False"}
-      </p>
+      <p>Estoque: {produto.stock}</p>
 
       <button>Ver Detalhes</button>
     </div>

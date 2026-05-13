@@ -167,7 +167,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -4.5px;
     border: 5px solid transparent;
@@ -181,4 +181,43 @@
     right: 0;
     border-right-color: var(--border);
   }
+}
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 24px;
+}
+
+.card-produto {
+  background: #1f1f27;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.card-produto img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+}
+
+.card-produto h2 {
+  font-size: 18px;
+  min-height: 48px;
+}
+
+.card-produto p {
+  color: #c8d3e6;
+  margin: 6px 0;
+}
+
+.card-produto button {
+  margin-top: 12px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
